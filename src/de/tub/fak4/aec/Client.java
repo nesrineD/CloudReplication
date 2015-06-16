@@ -42,7 +42,7 @@ public class Client {
 
 		Operations.create(property.getProperty("nodeA"), port, "cloudS", list, "nodeA");
 
-		ArrayList<String> read = Operations.read(property.getProperty("nodeA"), port, "cloudS", "nodeA");
+		ArrayList<String> read = Operations.read(property.getProperty("nodeA_public"), port, "cloudS", "nodeA");
 		System.out.println("The value is" + read);
 		ArrayList<String> newlist = new ArrayList<String>();
 		newlist.add("doghri");

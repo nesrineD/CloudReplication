@@ -1,5 +1,6 @@
 package de.aec.replication;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -13,7 +14,7 @@ public class TransRequestToOtherServers {
 	
 	private static TransRequestToOtherServers instance = null;
 	
-	private static final Logger log = Logger.getLogger(Storage.class);
+	private static final Logger log = Logger.getLogger(TransRequestToOtherServers.class);
 	
 	public static TransRequestToOtherServers getInstance() {
 		
@@ -24,17 +25,16 @@ public class TransRequestToOtherServers {
 		return instance;
 	}
 	
-	public void sendRequest(String operate, List<String> list, Request req) {
+	public void sendRequest(String operate, List<String> list, Request req) throws IOException {
 		
+		ConfigureHelper config = new ConfigureHelper ();
 		int i = 0;
 		while (i < list.size()) {
 
 			if (list.get(i).equals("sync")) {
 				String target = list.get(i + 1);
 				System.out.println("the synch target is :" + target);
-
-				ConfigureHelper.servermap.get(target);
-				Sender sender = new Sender(ConfigureHelper.servermap.get(target), 6000);
+				Sender sender = new Sender(config.PropertyParser().get(target), 6000);
 				Response r = sender.sendMessage(req, 1000);
 				i = i + 2;
 				
@@ -44,7 +44,7 @@ public class TransRequestToOtherServers {
 				// forward the create request to target server
 				// asynchronously
 				
-				Sender sender = new Sender(ConfigureHelper.servermap.get(target), 6000);
+				Sender sender = new Sender(config.PropertyParser().get(target), 6000);
 				sender.sendMessageAsync(req, new MyAsyncCallBack());
 				i = i + 2;
 
@@ -58,7 +58,7 @@ public class TransRequestToOtherServers {
 					// extarct the ipaddress and the port number
 					// corresponding to the qparticipant
 					System.out.println("I sent a quorum of size :" + qSize + "to q participant " + qparticipant);
-					Sender sender = new Sender(ConfigureHelper.servermap.get(qparticipant), 6000);
+					Sender sender = new Sender(config.PropertyParser().get(qparticipant), 6000);
 					sender.sendMessageAsync(req, new MyAsyncCallBack());
 					j++;
 
