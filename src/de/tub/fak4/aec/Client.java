@@ -48,11 +48,11 @@ public class Client {
 		newlist.add("doghri");
 		newlist.add("yang");
 		newlist.add("aec");
-		Operations.update(property.getProperty("nodeA"), port, "cloudS", newlist, "nodeA");
-		ArrayList<String> update = Operations.read(property.getProperty("nodeA"), port, "cloudS", "nodeA");
+		Operations.update(property.getProperty("nodeA_public"), port, "cloudS", newlist, "nodeA");
+		ArrayList<String> update = Operations.read(property.getProperty("nodeA_public"), port, "cloudS", "nodeA");
 		System.out.println("The value after update is" + update);
-		Operations.delete(property.getProperty("nodeA"), port, "cloudS", "nodeA");
-		ArrayList<String> delete = Operations.read(property.getProperty("nodeA"), port, "cloudS", "nodeA");
+		Operations.delete(property.getProperty("nodeA_public"), port, "cloudS", "nodeA");
+		ArrayList<String> delete = Operations.read(property.getProperty("nodeA_public"), port, "cloudS", "nodeA");
 		System.out.println("The value after delete is" + delete);
 
 	}
