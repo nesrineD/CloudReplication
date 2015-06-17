@@ -13,7 +13,7 @@ public class StrategyHandler {
 
 	public static void runningStrategy(String sender, Request request, String operation) throws Exception{
 		
-		//´«²¥²ßÂÔ
+	
 		HashMap<String, List<String>> map = new HashMap<String, List<String>>();
 		File file = new File("resources/ReplicationPath.xml");
 		ParseXML parse = new ParseXML();
