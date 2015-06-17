@@ -31,16 +31,15 @@ implements IRequestHandler, AsyncCallbackRecipient {
 		
 		Boolean flag = (Boolean) items.get(2);
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
-		//本地存储数据
-		Response resp = new Response(Storage.getInstance().delete(key), "Result for delete:", true, req);
 		
-		//发送给哪个服务器
+		Response resp = new Response(Storage.getInstance().delete(key), "Result for delete:", true, req);
+	
 		String sender = req.getOriginator();
 		
-		//是否由客户端发起
+		
 		if(flag){
 			try {
-				//调用转发策略
+			
 				StrategyHandler.runningStrategy(sender, req, "delete");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
