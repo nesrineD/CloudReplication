@@ -24,18 +24,14 @@ implements IRequestHandler, AsyncCallbackRecipient {
 		ArrayList<String> value = (ArrayList<String>) items.get(1);
 		Boolean flag = (Boolean) items.get(2);
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
-		//本地存储数据
+		
 		Storage.getInstance().update(key, value);
 		Response resp = new Response(Storage.getInstance().read(key), "Result for create:", true, req);
-//		Response resp = new Response(key, "Result for create:", true, req);
 		
-		//发送给哪个服务器
 		String sender = req.getOriginator();
-		
-		//是否由客户端发起
+
 		if(flag){
 			try {
-				//调用转发策略
 				StrategyHandler.runningStrategy(sender, req,"update");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
