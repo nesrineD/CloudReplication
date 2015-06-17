@@ -14,14 +14,14 @@ import edu.kit.aifb.dbe.hermes.SimpleFileLogger;
 
 public class HermesServer {
 	private static RequestHandlerRegistry req = null;
-	// log4j初始化
+
 	static {
 		PropertyConfigurator.configure("resources/log4j.properties");
 		SimpleFileLogger.getInstance();
 		req = RequestHandlerRegistry.getInstance();
 	}
 	
-	// 获取RequestHandlerRegistry实例
+
 	public static RequestHandlerRegistry getRequestHandlerRegistry() {
 		if(req == null) {
 			req = RequestHandlerRegistry.getInstance();
