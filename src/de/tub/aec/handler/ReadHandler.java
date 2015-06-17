@@ -29,16 +29,13 @@ implements IRequestHandler, AsyncCallbackRecipient {
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
 		Boolean flag = (Boolean) items.get(2);
 		
-		//本地存储数据
+		
 		Response resp = new Response(Storage.getInstance().read(key), "Result for create:", true, req);
 		
-		//发送给哪个服务器
 		String sender = req.getOriginator();
 		
-		//是否由客户端发起
 		if(flag){
 			try {
-				//调用转发策略
 				StrategyHandler.runningStrategy(sender, req,"read");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
