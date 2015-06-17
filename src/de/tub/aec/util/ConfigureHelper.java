@@ -8,19 +8,19 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * °ïÖúÀà
- * @author Yang Yi
+ * 
+ * THis class is used to store the informations of the property file into a map
  *
  */
 public class ConfigureHelper {
-	public static String IP = "141.23.64.204";		// Ä¿±êÖ÷»úIP
-	public static int PORT = 8081;					    // Ä¿±êÖ÷»ú¶Ë¿Ú
-	public static int TIME_OUT = 10000;				// ³¬Ê±Ê±¼ä10s
+	public static String IP = "141.23.64.204";		// Destination Host IP
+	public static int PORT = 8081;					    // Port destination
+	public static int TIME_OUT = 10000;			
 	
 	public static String SYNC = "sync";
 	public static String ASYNC = "async";
 	
-	public static String SELF_NAME = "nodeA";			//ÎÒÊÇ·şÎñÆ÷A,²»¶®·şÎñÆ÷Ãû×Ö²»Ò»Ñù
+	public static String SELF_NAME = "nodeA";			//æˆ‘æ˜¯æœåŠ¡å™¨A,ä¸æ‡‚æœåŠ¡å™¨åå­—ä¸ä¸€æ ·
 	
 	public static Map<String, String> PropertyParser() throws IOException {
 		InputStream input = new FileInputStream("resources/ip_assignment.properties");
