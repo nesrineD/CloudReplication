@@ -1,7 +1,7 @@
 /**
  *
  */
-package de.aec.replication;
+package de.tub.fak4.server;
 
 import java.io.Serializable;
 import java.util.ArrayList;

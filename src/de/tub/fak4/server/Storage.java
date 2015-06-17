@@ -1,7 +1,7 @@
 /**
  *
  */
-package de.aec.replication;
+package de.tub.fak4.server;
 
 import java.util.ArrayList;
 import java.util.HashMap;

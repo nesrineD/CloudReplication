@@ -1,7 +1,7 @@
 /**
  *
  */
-package de.aec.replication;
+package de.tub.fak4.server;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,24 +21,16 @@ import edu.kit.aifb.dbe.hermes.Response;
  *
  *
  */
-public class CreateHandler
-		implements IRequestHandler, AsyncCallbackRecipient {
-	
-	private static CreateHandler createHandler = new CreateHandler();
+public class DeleteHandler
+implements IRequestHandler, AsyncCallbackRecipient {
 
 	@Override
 	public Response handleRequest(Request req) {
-		
 		List<Serializable> items = new ArrayList<Serializable>();
 		items = req.getItems();
 		String key = (String) items.get(0);
-		@SuppressWarnings("unchecked")
-		ArrayList<String> value = (ArrayList<String>) items.get(1);
-		System.out.println(" The value is " + value + " for key " + key);
-		Storage.getInstance().create(key, value);
-		Response resp = new Response(Storage.getInstance().read(key), "Result for create:", true, req);
-		System.out.println("Result for create is :" + Storage.getInstance().read(key));
-		
+		Storage.getInstance().delete(key);
+		// TODO Forward the request according to the replication path
 		HashMap<String, List<String>> map = new HashMap<String, List<String>>();
 		File file = new File("src/resources/ReplicationPath.xml");
 		ParseXML parse = new ParseXML();
@@ -59,30 +51,32 @@ public class CreateHandler
 			List<String> list = new ArrayList<String>();
 			list = map.get(pathID);
 			try {
-				TransRequestToOtherServers.getInstance().sendRequest("create", list, req);
+				TransRequestToOtherServers.getInstance().sendRequest("delete", list, req);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		return resp;
+		return null;
 	}
-	
+
 	@Override
 	public boolean requiresResponse() {
-		return true;
+		return false;
 	}
-	
+
 	@Override
-	public boolean hasPriority() { // TODO Auto-generated method
+	public boolean hasPriority() {
+		// TODO Auto-generated method stub
 		return false;
 	}
 	
 	@Override
 	public void callback(Response response) {
 		if (response.responseCode()) {
-			System.out.println("Successfull operation");
+			System.out.println("Successfull Delete operation");
 		}
-		
+
 	}
+
 }

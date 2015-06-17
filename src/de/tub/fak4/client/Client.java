@@ -1,4 +1,4 @@
-package de.tub.fak4.aec;
+package de.tub.fak4.client;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

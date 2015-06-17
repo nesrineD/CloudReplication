@@ -1,4 +1,4 @@
-package de.aec.replication;
+package de.tub.fak4.server;
 
 import edu.kit.aifb.dbe.hermes.AsyncCallbackRecipient;
 import edu.kit.aifb.dbe.hermes.Response;
