@@ -4,6 +4,7 @@
 package de.aec.replication;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,13 +52,18 @@ public class CreateHandler
 		String pathID = req.getOriginator();
 
 		ConfigureHelper config = new ConfigureHelper();
-		config.setSelftname(pathID);
-		System.out.println("the path ID is " + pathID + "I am node" + config.getSelftname());
+		config.setMyname(pathID);
+		System.out.println("the path ID is " + pathID + "I am node" + config.getMyname());
 		
 		if (map.containsKey(pathID)) {
 			List<String> list = new ArrayList<String>();
 			list = map.get(pathID);
-			TransRequestToOtherServers.getInstance().sendRequest("create", list, req);
+			try {
+				TransRequestToOtherServers.getInstance().sendRequest("create", list, req);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return resp;
 	}

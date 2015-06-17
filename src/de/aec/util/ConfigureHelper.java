@@ -20,7 +20,7 @@ public class ConfigureHelper {
 	public static int PORT = 8081;
 	public static int TIME_OUT = 10000;
 	
-	private String selftname;
+	private String myname;
 
 	
 		
@@ -38,12 +38,12 @@ public class ConfigureHelper {
 		}
 
 	
-	public String getSelftname() {
-		return selftname;
+	public String getMyname() {
+		return myname;
 	}
 
-	public void setSelftname(String selftname) {
-		this.selftname = selftname;
+	public void setMyname(String myname) {
+		this.myname = myname;
 	}
 
 }

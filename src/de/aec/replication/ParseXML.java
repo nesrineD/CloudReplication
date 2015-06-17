@@ -13,6 +13,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import de.aec.util.ConfigureHelper;
+
 public class ParseXML {
 	
 	private HashMap<String, List<String>> map = new HashMap<String, List<String>>();
@@ -30,6 +32,7 @@ public class ParseXML {
 
 		String key = null;
 		List<String> oldSet = new ArrayList<String>();
+		ConfigureHelper config = new ConfigureHelper();
 
 		doc.getDocumentElement().normalize();
 		System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
@@ -49,7 +52,7 @@ public class ParseXML {
 				Element eElement = (Element) nNode;
 
 				String src = eElement.getAttribute("src");
-				if (src.equals("nodeC")) {
+				if (src.equals(config.getMyname())) {
 					key = eElement.getParentNode().getAttributes().item(0).getNodeValue();
 					System.out.println("the  key is " + key);
 					String type = eElement.getAttribute("type");
