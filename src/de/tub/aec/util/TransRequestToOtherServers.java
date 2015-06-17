@@ -37,13 +37,13 @@ public class TransRequestToOtherServers {
 				String target = list.get(++i);
 				System.out.println("the synch target is :" + target);
 				
-				//Callable”Î Future 
+				//Callable‰∏é Future 
 				ExecutorService executor = Executors.newCachedThreadPool();
 				TaskService taskService = new TaskService(req, operate, target, ConfigureHelper.SYNC );
 				result = executor.submit(taskService);
-				System.out.println("taskService‘À––Ω·π˚"+result.get());
+				System.out.println("taskServiceResult"+result.get());
 				if(result.get()){
-					//÷’÷π
+					//Termination
 					executor.shutdown();
 				}
 				i++;
@@ -51,16 +51,13 @@ public class TransRequestToOtherServers {
 			} else if (list.get(i).equals("async")) {
 				String target = list.get(++i);
 				System.out.println("the asynch target is :" + target);
-				// forward the create request to target server
-				// asynchronously
 				
-				//Callable”Î Future 
 				ExecutorService executor = Executors.newCachedThreadPool();
 				TaskService taskService = new TaskService(req, operate, target, ConfigureHelper.ASYNC );
 				result = executor.submit(taskService);
-				System.out.println("taskService‘À––Ω·π˚"+result.get());
+				System.out.println("taskServiceResult"+result.get());
 				if(result.get()){
-					//÷’÷π
+					//ÁªàÊ≠¢
 					executor.shutdown();
 				}
 				
@@ -72,18 +69,14 @@ public class TransRequestToOtherServers {
 				int j = i + 1;
 				while (j < list.size() && !list.get(j).equals("sync") && !list.get(j).equals("async") && !list.get(j).equals(null)) {
 					String qparticipant = list.get(j);
-					// forward quorum of size qSize to qparticipant
-					// extarct the ipaddress and the port number
-					// corresponding to the qparticipant
 					System.out.println("I sent a quorum of size :" + qSize + "to q participant " + qparticipant);
 					
-					//Callable”Î Future 
 					ExecutorService executor = Executors.newCachedThreadPool();
 					TaskService taskService = new TaskService(req, operate, qparticipant, ConfigureHelper.ASYNC );
 					result = executor.submit(taskService);
-					System.out.println("taskService‘À––Ω·π˚"+result.get());
+					System.out.println("taskServiceResult"+result.get());
 					if(result.get()){
-						//÷’÷π
+						//Termination
 						executor.shutdown();
 					}
 					j++;
