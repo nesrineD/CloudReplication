@@ -35,7 +35,7 @@ public class CreateHandler
 		
 		Boolean flag = (Boolean) items.get(2);
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
-		//本地存储数据
+	
 		Storage.getInstance().create(key, value);
 		Response resp = new Response(Storage.getInstance().read(key), "Result for create:", true, req);
 //		Response resp = new Response(key, "Result for create:", true, req);
