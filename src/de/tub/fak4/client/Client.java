@@ -16,7 +16,7 @@ import org.apache.log4j.PropertyConfigurator;
 public class Client {
 	
 	// static String host = "localhost";
-	static int port = 5000;
+	static int port =4000;
 	static InputStream input;
 
 	static Properties property = new Properties();
