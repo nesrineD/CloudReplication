@@ -19,7 +19,7 @@ public class Server {
 			throws Exception {
 		PropertyConfigurator.configure("src/resources/log4j.properties");
 		int port = 9057;
-		ReplicationPath path = new ReplicationPath();
+		
 
 		RequestHandlerRegistry reg = RequestHandlerRegistry.getInstance();
 		reg.registerHandler("create", new CreateHandler());
@@ -27,7 +27,7 @@ public class Server {
 		reg.registerHandler("update", new UpdateHander());
 		reg.registerHandler("delete", new DeleteHandler());
 		Receiver receiver = new Receiver(port);
-		path.TargetSet();
+		
 		
 		receiver.start();
 

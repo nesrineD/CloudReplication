@@ -20,10 +20,5 @@ public class ReplicationPath {
 		this.map = map;
 	}
 	
-	public void TargetSet() {
-		Set<String> targets = new HashSet<String>();
-		targets.add("SyncTarget");
-		targets.add("nodeB");
-		map.put("nodeA", targets);
-	}
+	
 }
