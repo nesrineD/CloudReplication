@@ -17,8 +17,8 @@ import java.util.Properties;
 public class ConfigureHelper {
 
 	public static String IP = "127.0.0.1";
-	public static int PORT = 8081;
-	public static int TIME_OUT = 10000;
+	public static int PORT = 4000;
+	public static int TIME_OUT = 1000;
 	
 	private String myname;
 

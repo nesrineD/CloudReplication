@@ -34,8 +34,8 @@ public class TransRequestToOtherServers {
 			if (list.get(i).equals("sync")) {
 				String target = list.get(i + 1);
 				System.out.println("the synch target is :" + target);
-				Sender sender = new Sender(config.PropertyParser().get(target), 6000);
-				Response r = sender.sendMessage(req, 1000);
+				Sender sender = new Sender(config.PropertyParser().get(target), ConfigureHelper.PORT);
+				Response r = sender.sendMessage(req, ConfigureHelper.TIME_OUT);
 				i = i + 2;
 				
 			} else if (list.get(i).equals("async")) {
@@ -44,7 +44,7 @@ public class TransRequestToOtherServers {
 				// forward the create request to target server
 				// asynchronously
 				
-				Sender sender = new Sender(config.PropertyParser().get(target), 6000);
+				Sender sender = new Sender(config.PropertyParser().get(target), ConfigureHelper.PORT);
 				sender.sendMessageAsync(req, new MyAsyncCallBack());
 				i = i + 2;
 
@@ -58,7 +58,7 @@ public class TransRequestToOtherServers {
 					// extarct the ipaddress and the port number
 					// corresponding to the qparticipant
 					System.out.println("I sent a quorum of size :" + qSize + "to q participant " + qparticipant);
-					Sender sender = new Sender(config.PropertyParser().get(qparticipant), 6000);
+					Sender sender = new Sender(config.PropertyParser().get(qparticipant), ConfigureHelper.PORT);
 					sender.sendMessageAsync(req, new MyAsyncCallBack());
 					j++;
 

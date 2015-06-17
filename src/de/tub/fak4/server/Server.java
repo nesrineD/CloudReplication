@@ -18,7 +18,7 @@ public class Server {
 	public static void main(String[] args)
 			throws Exception {
 		PropertyConfigurator.configure("src/resources/log4j.properties");
-		int port = 9057;
+		int port = 4000;
 		
 
 		RequestHandlerRegistry reg = RequestHandlerRegistry.getInstance();
