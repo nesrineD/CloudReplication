@@ -41,13 +41,14 @@ public class CreateHandler
 //		Response resp = new Response(key, "Result for create:", true, req);
 		
 		
-		String sender = req.getOriginator();
+		String pathID = req.getOriginator();
 		
 		//to check that it is initialized by the client
+		//only the client sends a third argument
 		if(flag){
 			try {
 				//Call Farwarding 
-				StrategyHandler.runningStrategy(sender, req,"create");
+				StrategyHandler.runningStrategy(pathID, req,"create");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

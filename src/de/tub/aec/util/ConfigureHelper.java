@@ -13,14 +13,13 @@ import java.util.Properties;
  *
  */
 public class ConfigureHelper {
-	public static String IP = "141.23.64.204";		// Destination Host IP
 	public static int PORT = 8081;					    // Port destination
 	public static int TIME_OUT = 10000;			
 	
 	public static String SYNC = "sync";
 	public static String ASYNC = "async";
 	
-	public static String SELF_NAME = "nodeA";			//我是服务器A,不懂服务器名字不一样
+	public static String SELF_NAME = "nodeA";			//
 	
 	public static Map<String, String> PropertyParser() throws IOException {
 		InputStream input = new FileInputStream("resources/ip_assignment.properties");

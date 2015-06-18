@@ -37,7 +37,7 @@ public class TransRequestToOtherServers {
 				String target = list.get(++i);
 				System.out.println("the synch target is :" + target);
 				
-				//Callable与 Future 
+				//Callables and Future 
 				ExecutorService executor = Executors.newCachedThreadPool();
 				TaskService taskService = new TaskService(req, operate, target, ConfigureHelper.SYNC );
 				result = executor.submit(taskService);
@@ -57,7 +57,7 @@ public class TransRequestToOtherServers {
 				result = executor.submit(taskService);
 				System.out.println("taskServiceResult"+result.get());
 				if(result.get()){
-					//终止
+					//termination
 					executor.shutdown();
 				}
 				
