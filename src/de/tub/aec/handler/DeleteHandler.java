@@ -28,7 +28,7 @@ implements IRequestHandler, AsyncCallbackRecipient {
 		List<Serializable> items = new ArrayList<Serializable>();
 		items = req.getItems();
 		String key = (String) items.get(0);
-		
+		//only the client has flag = true ; it sends in the third argument the path ID
 		Boolean flag = (Boolean) items.get(2);
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
 		

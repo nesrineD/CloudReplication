@@ -4,15 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="C:/Users/Asus/Desktop/Sommersemester/Advanced Entreprise Computing/JARs/hermes-v2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Asus/Desktop/Sommersemester/Advanced Entreprise Computing/JARs/log4j-1.2.16 (1).jar"/>
-	<classpathentry kind="lib" path="C:/Users/Asus/.m2/repository/org/jdom/jdom-legacy/1.1.3/jdom-legacy-1.1.3.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.jdom"/>
-			<attribute name="maven.artifactId" value="jdom-legacy"/>
-			<attribute name="maven.version" value="1.1.3"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

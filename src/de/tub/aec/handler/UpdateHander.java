@@ -22,6 +22,7 @@ implements IRequestHandler, AsyncCallbackRecipient {
 		String key = (String) items.get(0);
 		@SuppressWarnings("unchecked")
 		ArrayList<String> value = (ArrayList<String>) items.get(1);
+		//only the client has flag = true ; it sends in the third argument the path ID
 		Boolean flag = (Boolean) items.get(2);
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
 		

@@ -16,10 +16,10 @@ import edu.kit.aifb.dbe.hermes.Request;
 import edu.kit.aifb.dbe.hermes.Response;
 
 /**
- *
- *
+ *CreateHandler class is responsible for the handler of the create method
  *
  */
+
 public class CreateHandler
 		implements IRequestHandler, AsyncCallbackRecipient {
 	private static Logger logger = Logger.getLogger(CreateHandler.class);
@@ -32,15 +32,12 @@ public class CreateHandler
 		System.out.println(items);
 		@SuppressWarnings("unchecked")
 		ArrayList<String> value = (ArrayList<String>) items.get(1);
-		
+		//only the client has flag = true ; it sends in the third argument the path ID
 		Boolean flag = (Boolean) items.get(2);
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
 	
 		Storage.getInstance().create(key, value);
 		Response resp = new Response(Storage.getInstance().read(key), "Result for create:", true, req);
-//		Response resp = new Response(key, "Result for create:", true, req);
-		
-		
 		String pathID = req.getOriginator();
 		
 		//to check that it is initialized by the client

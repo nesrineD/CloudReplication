@@ -27,9 +27,8 @@ implements IRequestHandler, AsyncCallbackRecipient {
 		String key = (String) items.get(0);
 		System.out.println("The result for Get is" + Storage.getInstance().read(key));
 		logger.info("I am the server: "+ConfigureHelper.SELF_NAME);
+		//only the client has flag = true ; it sends in the third argument the path ID
 		Boolean flag = (Boolean) items.get(2);
-		
-		
 		Response resp = new Response(Storage.getInstance().read(key), "Result for create:", true, req);
 		
 		String sender = req.getOriginator();

@@ -12,6 +12,11 @@ import org.apache.log4j.Logger;
 import de.tub.aec.operation.TaskService;
 import edu.kit.aifb.dbe.hermes.Request;
 
+/**
+ * This class is used to transmit the request the other servers  
+ * It executes the threads from Taskservice and checks their termination
+ *
+ */
 public class TransRequestToOtherServers {
 	
 	private static TransRequestToOtherServers instance = null;

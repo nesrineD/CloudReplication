@@ -10,7 +10,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 /**
- * responsible for storing data in memory database
+ * responsible for storing data in memory 
  */
 
 public class Storage {

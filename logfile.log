@@ -2625,3 +2625,94 @@ Queue status:
 - 0 responses waiting
 - 0 clients waiting
 - 0 clients unread
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type CreateHandler for target create
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type UpdateHander for target update
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type ReadHandler for target read
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type DeleteHandler for target delete
+INFO main edu.kit.aifb.dbe.hermes.Receiver - Receiver created at port 8081
+INFO Thread-1 edu.kit.aifb.dbe.hermes.Receiver - Receiver is now running.
+INFO Thread-1 edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Known handlers:
+	ReadHandler(target: read)
+	CreateHandler(target: create)
+	UpdateHander(target: update)
+	DeleteHandler(target: delete)
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - ThreadScaleManager is now running.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Started 3 RequestHandlerThreads.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Started 3 NetworkIOHandlerThreads.
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type CreateHandler for target create
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type UpdateHander for target update
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type ReadHandler for target read
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type DeleteHandler for target delete
+INFO main edu.kit.aifb.dbe.hermes.Receiver - Receiver created at port 8081
+INFO Thread-1 edu.kit.aifb.dbe.hermes.Receiver - Receiver is now running.
+INFO Thread-1 edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Known handlers:
+	ReadHandler(target: read)
+	CreateHandler(target: create)
+	UpdateHander(target: update)
+	DeleteHandler(target: delete)
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - ThreadScaleManager is now running.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Started 3 RequestHandlerThreads.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Started 3 NetworkIOHandlerThreads.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-3 de.tub.aec.handler.CreateHandler - I am the server: nodeA
+ERROR pool-2-thread-1 edu.kit.aifb.dbe.hermes.Sender - Could not start session.
+java.net.NoRouteToHostException: No route to host: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at edu.kit.aifb.dbe.hermes.Sender.startSession(Sender.java:112)
+	at edu.kit.aifb.dbe.hermes.Sender.access$0(Sender.java:94)
+	at edu.kit.aifb.dbe.hermes.Sender$SenderCallable.call(Sender.java:311)
+	at edu.kit.aifb.dbe.hermes.Sender$SenderCallable.call(Sender.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+ERROR pool-2-thread-1 edu.kit.aifb.dbe.hermes.Sender - Could not start session.
+ERROR Thread-6 edu.kit.aifb.dbe.hermes.Receiver - Exception in NetworkIOHandler.run()
+java.lang.NullPointerException
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.closeSession(Receiver.java:708)
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.respond(Receiver.java:693)
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.tryResponses(Receiver.java:530)
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.run(Receiver.java:505)
+INFO Thread-3 de.tub.aec.handler.ReadHandler - I am the server: nodeA
+ERROR Thread-6 edu.kit.aifb.dbe.hermes.Receiver - Exception in NetworkIOHandler.run()
+java.lang.NullPointerException
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.closeSession(Receiver.java:708)
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.respond(Receiver.java:693)
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.tryResponses(Receiver.java:530)
+	at edu.kit.aifb.dbe.hermes.Receiver$NetworkIOHandler.run(Receiver.java:505)
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread

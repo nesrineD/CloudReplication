@@ -12,6 +12,11 @@ import edu.kit.aifb.dbe.hermes.Receiver;
 import edu.kit.aifb.dbe.hermes.RequestHandlerRegistry;
 import edu.kit.aifb.dbe.hermes.SimpleFileLogger;
 
+/**
+ * The main Server Class
+ * It registers the handlers and starts 
+ * 
+ */
 public class HermesServer {
 	private static RequestHandlerRegistry req = null;
 
@@ -28,6 +33,7 @@ public class HermesServer {
 		}
 		return req;
 	}
+	
 	
 	public static void main(String[] args) {
 		CreateHandler ch = new CreateHandler();
