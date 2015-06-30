@@ -13,20 +13,20 @@ import java.util.Properties;
  */
 
 public class ConfigureHelper {
-	
-	public static int TIME_OUT = 10000;
-	
+
+	public static int TIME_OUT = 1000;
+
 	public static String SYNC = "sync";
 	public static String ASYNC = "async";
-
-	public static String SELF_NAME = "nodeA";
 	
+	public static String SELF_NAME = "nodeA";
+
 	/**
 	 * Stores the ip addresses, nodeId mapping in a map
-	 * 
+	 *
 	 * @return the server map: key= node ID, value=private IP address
 	 */
-
+	
 	public static Map<String, String> PropertyParser()
 			throws IOException {
 		InputStream input = new FileInputStream("resources/ip_assignment.properties");
@@ -37,7 +37,7 @@ public class ConfigureHelper {
 		servermap.put("nodeC", property.getProperty("nodeC"));
 		servermap.put("nodeA", property.getProperty("nodeA"));
 		return servermap;
-		
+
 	}
-	
+
 }
