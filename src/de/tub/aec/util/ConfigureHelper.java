@@ -19,7 +19,7 @@ public class ConfigureHelper {
 	public static String SYNC = "sync";
 	public static String ASYNC = "async";
 	
-	public static String SELF_NAME = "nodeA";
+	public static String SELF_NAME = "nodeB";
 
 	/**
 	 * Stores the ip addresses, nodeId mapping in a map
