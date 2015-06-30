@@ -2716,3 +2716,134 @@ Queue status:
 - 0 responses waiting
 - 0 clients waiting
 - 0 clients unread
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type CreateHandler for target create
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type UpdateHander for target update
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type ReadHandler for target read
+INFO main edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Registered handler of type DeleteHandler for target delete
+INFO main edu.kit.aifb.dbe.hermes.Receiver - Receiver created at port 8081
+INFO Thread-1 edu.kit.aifb.dbe.hermes.Receiver - Receiver is now running.
+INFO Thread-1 edu.kit.aifb.dbe.hermes.RequestHandlerRegistry - Known handlers:
+	ReadHandler(target: read)
+	CreateHandler(target: create)
+	UpdateHander(target: update)
+	DeleteHandler(target: delete)
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - ThreadScaleManager is now running.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Started 3 RequestHandlerThreads.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Started 3 NetworkIOHandlerThreads.
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
+INFO Thread-2 edu.kit.aifb.dbe.hermes.Receiver - Now active: 
+- 1 out of 3 NetworkHandlerThreads
+- 1 out of 3 RequestHandlerThreads
+Queue status:
+- 0 priority requests waiting
+- 0 normal requests waiting
+- 0 responses waiting
+- 0 clients waiting
+- 0 clients unread
